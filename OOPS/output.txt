@@ -1,0 +1,9 @@
+0
+12
+131
+a is even!
+b is odd!
+131
+b is prime!
+b is palindrome!
+1728
