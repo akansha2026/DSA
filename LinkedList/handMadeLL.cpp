@@ -38,7 +38,7 @@ class List{
 
     // O(1)
     void push_back(T val){
-        Node<T>* newNode = new Node(val);
+        Node<T>* newNode = new Node<T>(val);
         if(head == NULL){
             head = tail = newNode;
         }else{
@@ -70,7 +70,7 @@ class List{
 
     // O(1)
     void push_front(int val){
-        Node<T>* newNode = new Node(val);
+        Node<T>* newNode = new Node<T>(val);
         if(head == NULL){
             head = tail = newNode;
         }else{
@@ -120,7 +120,7 @@ class List{
     Node<T>* middle(){
         Node<T>* slow = head;
         Node<T>* fast = head;
-        while(fast != NULL || fast->next != NULL){
+        while(fast != NULL && fast->next != NULL){
             slow = slow->next;
             fast = fast->next->next;
         }
@@ -134,6 +134,17 @@ int main(){
         fileIO();
     #endif
 
-    
-    
+
+    List<string> l;
+    l.push_back("Akansha");
+    l.push_back("Ashish");
+    l.push_back("Abhishek");
+    l.push_back("XYZ");
+    cout << l.size() << endl;
+
+    Node<string>* ans = l.middle();
+    cout << ans << "...." << endl;
+    cout << ans->data << endl;
+
+    // list<string> ls;
 }

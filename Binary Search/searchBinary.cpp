@@ -46,5 +46,8 @@ int main(){
         cin >> arr[i];
     }
     cout << BinarySearch(arr,0,8,6) <<endl;
-    
+    vector<int> ::iterator it,itr;
+    it = lower_bound(arr.begin(),arr.end(),6);
+    itr = upper_bound(arr.begin(),arr.end(),6);
+    // cout <<it <<endl;
 }
